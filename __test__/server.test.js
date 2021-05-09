@@ -26,9 +26,9 @@ describe('Testing server', () => {
     
     });
     expect(response.status).toEqual(201);
-    expect(response.body.record.name).toEqual('maqluba');
+    expect(response.body.name).toEqual('maqluba');
    
-    id = response.body.id;
+    id = response.body._id;
   });
   // Update 
   it('Update a record', async () => {
@@ -37,21 +37,21 @@ describe('Testing server', () => {
     
     });
     expect(response.status).toEqual(200);
-    expect(response.body.record.name).toEqual('kabsah');
+    expect(response.body.name).toEqual('kabsah');
    
   });
   // Read 
   it('Read a record', async () => {
     const response = await request.get(`/food/${id}`);
     expect(response.status).toEqual(200);
-    expect(response.body.record.name).toEqual('kabsah');
+    expect(response.body.name).toEqual('kabsah');
    
   });
   // Read all 
   it('Read all record', async () => {
     const response = await request.get('/food/');
     expect(response.status).toEqual(200);
-    expect(response.body[0].record.name).toEqual('kabsah');
+    expect(response.body[0].name).toEqual('kabsah');
    
   });
   // Delete a record
