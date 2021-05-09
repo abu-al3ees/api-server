@@ -19,7 +19,8 @@ class ModelCollection {
 
   create(obj) {
     let newRecord = new this.model(obj);
-    return newRecord.save();
+    newRecord.save();
+    return newRecord;
   }
 
   update(_id, obj) {

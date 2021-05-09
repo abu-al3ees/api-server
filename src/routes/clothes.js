@@ -14,9 +14,9 @@ const clothesInstance = new Clothes(clothesitem);
 
 router.get('/clothes', getclothes);
 router.get('/clothes/:id', getOneclothes);
-router.post('/food', createclothes);
-router.put('/food/:id', updateclothes);
-router.delete('/food/:id', deleteclothes);
+router.post('/clothes', createclothes);
+router.put('/clothes/:id', updateclothes);
+router.delete('/clothes/:id', deleteclothes);
 
 
 async function getclothes(req, res) {
